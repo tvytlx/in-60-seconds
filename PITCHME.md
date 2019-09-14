@@ -1,77 +1,52 @@
-# Let's Get Started
+## 500 行 Python 写一个渲染器
+
+### by 谭啸
 
 ---
 
-## Add Some Slide Candy
+## 实现步骤
 
-![IMAGE](assets/img/presentation.png)
 
----?color=linear-gradient(180deg, white 75%, black 25%)
-@title[Customize Slide Layout]
+## 2d 平面上画点、线、三角形
+
+++++
 
 @snap[west span-50]
-## Customize the Layout
+## 3d 顶点坐标转换为2d平面坐标，连线
+@snapend
+
+
+
+@snap[east span-50]
+![](monkey_wireframe.png)
+@snapend
+
+++++
+@snap[west span-50]
+## 简单的光照
+@snapend
+
+
+@snap[east span-50]
+![](monkey_zbuffer.png)
+@snapend
+
+
++++
+@snap[west span-50]
+## 纹理映射
 @snapend
 
 @snap[east span-50]
-![IMAGE](assets/img/presentation.png)
-@snapend
-
-@snap[south span-100 text-white]
-Snap Layouts let you create custom slide designs directly within your markdown.
-@snapend
-
----?color=linear-gradient(90deg, #5384AD 65%, white 35%)
-@title[Add A Little Imagination]
-
-@snap[north-west h4-white]
-#### And start presenting...
-@snapend
-
-@snap[west span-55]
-@ul[list-spaced-bullets text-white text-09]
-- You will be amazed
-- What you can achieve
-- *With a little imagination...*
-- And **GitPitch Markdown**
-@ulend
-@snapend
-
-@snap[east span-45]
-@img[shadow](assets/img/conference.png)
+![](axe.png)
 @snapend
 
 ---
 
-@snap[north-east span-100 text-pink text-06]
-Let your code do the talking!
-@snapend
+## 经验
 
-```sql zoom-18
-CREATE TABLE "topic" (
-    "id" serial NOT NULL PRIMARY KEY,
-    "forum_id" integer NOT NULL,
-    "subject" varchar(255) NOT NULL
-);
-ALTER TABLE "topic"
-ADD CONSTRAINT forum_id
-FOREIGN KEY ("forum_id")
-REFERENCES "forum" ("id");
-```
+* 按图形学发展过程来做
+* 每一步实现，都有反馈
+* 找到正确的google关键词
 
-@snap[south span-100 text-gray text-08]
-@[1-5](You can step-and-ZOOM into fenced-code blocks, source files, and Github GIST.)
-@[6,7, zoom-13](Using GitPitch live code presenting with optional annotations.)
-@[8-9, zoom-12](This means no more switching between your slide deck and IDE on stage.)
-@snapend
-
-
----?image=assets/img/presenter.jpg
-
-@snap[north span-100 h2-white]
-## Now It's Your Turn
-@snapend
-
-@snap[south span-100 text-06]
-[Click here to jump straight into the interactive feature guides in the GitPitch Docs @fa[external-link]](https://gitpitch.com/docs/getting-started/tutorial/)
-@snapend
+---
