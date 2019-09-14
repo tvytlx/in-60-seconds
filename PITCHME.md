@@ -9,7 +9,7 @@
 
 ## 2d 平面上画点、线、三角形
 
-++++
++++
 
 @snap[west span-50]
 ## 3d 顶点坐标转换为2d平面坐标，连线
@@ -21,7 +21,7 @@
 ![](monkey_wireframe.png)
 @snapend
 
-++++
++++
 @snap[west span-50]
 ## 简单的光照
 @snapend
