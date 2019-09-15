@@ -8,7 +8,13 @@
 
 +++
 
+@snap[west span-50]
 ### 2d 平面上画点、线、三角形，填充三角形
+@snapend
+
+@snap[east span-50]
+![](bresenham.png)
+@snapend
 
 +++
 
