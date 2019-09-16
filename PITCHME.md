@@ -66,37 +66,8 @@ def draw_line(
 
 @snap[west span-70]
 ```python
-world_vertices = []
-
-def mvp(v):
-    model_matrix = Mat4d([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
-    view_matrix = look_at(Vec3d(-4, -4, 10), Vec3d(0, 0, 0))
-    projection_matrix = perspective_project(0.5, 0.5, 3, 1000)
-    world_vertex = model_matrix * v
-    world_vertices.append(Vec4d(world_vertex))
-    return projection_matrix * view_matrix * world_vertex
-
-def ndc(v):
-    """
-    各个坐标同时除以 w，得到 NDC 坐标
-    """
-    v = v.value
-    w = v[3, 0]
-    x, y, z = v[0, 0] / w, v[1, 0] / w, v[2, 0] / w
-    return Mat4d([[x], [y], [z], [1 / w]])
-
-def viewport(v):
-    x = y = 0
-    w, h = width, height
-    n, f = 0.3, 1000
-    return Vec3d(
-        w * 0.5 * v.value[0, 0] + x + w * 0.5,
-        h * 0.5 * v.value[1, 0] + y + h * 0.5,
-        0.5 * (f - n) * v.value[2, 0] + 0.5 * (f + n),
-    )
-
 # the render pipeline
-screen_vertices = [viewport(ndc(mvp(v))) for v in model.vertices]
+screen_vertices = [projection_matrix * view_matrix * world_vertex * v for v in model.vertices]
 ```
 @snapend
 
