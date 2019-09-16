@@ -23,6 +23,7 @@
 #### 2d 平面画线算法
 @snapend
 
+@snap[west span-50]
 ```python3
 def draw_line(
     v1: Vec2d, v2: Vec2d, canvas: Canvas
@@ -41,6 +42,11 @@ def draw_line(
 
     canvas.draw(dots)
 ```
+@snapend
+
+@snap[east span-50]
+![](bresenham.png)
+@snapend
 
 +++
 
