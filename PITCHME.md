@@ -12,37 +12,35 @@
 ### 2d 平面上画点、线、三角形，填充三角形
 @snapend
 
-
-+++
-@snap[north span-100]
-#### Fenced Code Block
-@snapend
-
-```elixir
-defmodule GenMetrics.GenStage.Monitor do
-    use GenServer
-
-    alias GenMetrics.GenStage.Manager
-    alias GenMetrics.GenStage.Monitor
-    alias GenMetrics.GenStage.Pipeline
-    alias GenMetrics.GenStage.Window
-    alias GenMetrics.Reporter
-    alias GenMetrics.Utils.Runtime
-
-    @moduledoc false
-    @handle_demand :handle_demand
-    @handle_events :handle_events
-    @handle_call   :handle_call
-    @handle_cast   :handle_cast
-
-    defstruct pipeline: %Pipeline{}, metrics: nil, start: 0, duration: 0
-```
-
-+++
-
 @snap[east span-50]
 ![](bresenham.png)
 @snapend
+
+
++++
+
+@snap[north span-100]
+#### 2d 平面画线算法
+@snapend
+
+```python3
+def draw_line(
+    v1: Vec2d, v2: Vec2d, canvas: Canvas
+):
+    slope = abs((v1.y - v2.y) / (v1.x - v2.x))
+    y = v1.y
+    err = 0
+    incr = 1 if v1.y < v2.y else -1
+    dots = []
+    for x in range(v1.x, v2.x):
+        dots.append(x, y)
+        err += slope
+        if abs(error) >= 0.5:
+            y += incr
+            error -= 1
+
+    canvas.draw(dots)
+```
 
 +++
 
