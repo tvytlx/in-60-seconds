@@ -64,14 +64,14 @@ def draw_line(
 ### 3d 顶点坐标转换为2d平面坐标，连线
 @snapend
 
-@snap[west span-70]
+@snap[west span-60]
 ```python
 # the render pipeline
-screen_vertices = [projection_matrix * view_matrix * world_vertex * v for v in model.vertices]
+projection_matrix * view_matrix * world_vertex * model.vertex
 ```
 @snapend
 
-@snap[east span-30]
+@snap[east span-40]
 ![](monkey_wireframe.png)
 @snapend
 
