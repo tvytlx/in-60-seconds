@@ -51,7 +51,7 @@ def draw_line(
 +++
 
 @snap[west span-50]
-### 3d 顶点坐标转换为2d平面坐标，连线
+### 3d 顶点坐标转换为2d平面坐标
 @snapend
 
 @snap[east span-50]
@@ -61,13 +61,14 @@ def draw_line(
 +++
 
 @snap[north span-100]
-### 3d 顶点坐标转换为2d平面坐标，连线
+### 3d 顶点坐标转换为2d平面坐标
 @snapend
 
 @snap[west span-60]
 ```python
 # the render pipeline
-projection_matrix * view_matrix * world_vertex * model.vertex
+projection_matrix * view_matrix *\
+    world_vertex * model.vertex
 ```
 @snapend
 
