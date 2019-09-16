@@ -24,7 +24,7 @@
 @snapend
 
 @snap[west span-50]
-```python3
+```python
 def draw_line(
     v1: Vec2d, v2: Vec2d, canvas: Canvas
 ):
