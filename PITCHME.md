@@ -93,7 +93,7 @@ def draw_line(
 ### 简单的光照
 @snapend
 
-@snap[west span-80]
+@snap[west span-70]
 ```python
 def get_light_intensity(face):
     light = Vec3d(-2, 4, -10)
@@ -104,7 +104,7 @@ def get_light_intensity(face):
 @snapend
 
 
-@snap[east span-20]
+@snap[east span-30]
 ![](monkey_zbuffer.png)
 @snapend
 
