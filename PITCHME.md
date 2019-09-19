@@ -95,7 +95,7 @@ def draw_line(
 
 @snap[west span-70]
 ```python
-def get_light_intensity(face) -> float:
+def get_light_intensity(face):
     light = Vec3d(-2, 4, -10)
     v1, v2, v3 = face
     up = normalize(cross_product(v2 - v1, v3 - v1))
