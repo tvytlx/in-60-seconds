@@ -64,14 +64,14 @@ def draw_line(
 @snapend
 
 @snap[west span-60]
-![](gl_transform.png)
+![OpenGL vertex transformation](gl_transform.png)
 @snapend
 
 @snap[east span-40]
 ![](monkey_wireframe.png)
 @snapend
 
-@snap[south span-10]
+@snap[south span-100]
 图片来自：http://www.songho.ca/opengl/gl_transform.html
 @snapend
 
