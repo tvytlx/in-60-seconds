@@ -9,7 +9,7 @@
 +++
 
 @snap[west span-50]
-### 1, 2d 平面上画点、线、三角形，填充三角形
+### 1, 2D平面上画点、线、三角形、填充三角形等
 @snapend
 
 @snap[east span-50]
@@ -28,17 +28,16 @@
 def draw_line(
     v1: Vec2d, v2: Vec2d, canvas: Canvas
 ):
-    slope = abs((v1.y - v2.y) / (v1.x - v2.x))
-    y = v1.y
-    err = 0
-    incr = 1 if v1.y < v2.y else -1
     dots = []
+    err = 0
+    y = v1.y
+    slope = abs((v1.y - v2.y) / (v1.x - v2.x))
     for x in range(v1.x, v2.x):
         dots.append(x, y)
         err += slope
-        if abs(error) >= 0.5:
-            y += incr
-            error -= 1
+        if abs(err) >= 0.5:
+            y += 1
+            err -= 1
 
     canvas.draw(dots)
 ```
@@ -51,7 +50,7 @@ def draw_line(
 +++
 
 @snap[west span-50]
-### 2, 3d 顶点坐标转换为2d平面坐标
+### 2, 空间坐标转换为平面坐标
 @snapend
 
 @snap[east span-50]
@@ -65,11 +64,7 @@ def draw_line(
 @snapend
 
 @snap[west span-60]
-```python
-# the render pipeline
-projection_matrix * view_matrix *\
-    world_vertex * model.vertex
-```
+![](gl_transform.png)
 @snapend
 
 @snap[east span-40]
