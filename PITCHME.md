@@ -77,7 +77,7 @@ def draw_line(
 
 +++
 @snap[west span-50]
-### 3, 简单的光照
+### 3, 简单的光照，z-buffer
 @snapend
 
 
