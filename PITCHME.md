@@ -61,7 +61,7 @@ def draw_line(
 +++
 
 @snap[north span-100]
-### 3, 3d 顶点坐标转换为2d平面坐标
+### 矩阵变化
 @snapend
 
 @snap[west span-60]
@@ -104,4 +104,10 @@ projection_matrix * view_matrix *\
 * 每一步实现，看到反馈
 * 找到正确的google关键词
 
+
 ---
+
+
+## Github 地址
+
+https://github.com/tvytlx/render-py
