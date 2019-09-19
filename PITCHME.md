@@ -93,18 +93,18 @@ def draw_line(
 ### 简单的光照
 @snapend
 
-@snap[west span-60]
+@snap[west span-70]
 ```python
 def get_light_intensity(face) -> float:
     light = Vec3d(-2, 4, -10)
     v1, v2, v3 = face
     up = normalize(cross_product(v2 - v1, v3 - v1))
     return dot_product(up, normalize(light))
- ```
- @snap
+```
+@snapend
 
 
-@snap[east span-40]
+@snap[east span-30]
 ![](monkey_zbuffer.png)
 @snapend
 
