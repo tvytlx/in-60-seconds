@@ -9,7 +9,7 @@
 +++
 
 @snap[west span-50]
-### 2d 平面上画点、线、三角形，填充三角形
+### 1, 2d 平面上画点、线、三角形，填充三角形
 @snapend
 
 @snap[east span-50]
@@ -20,7 +20,7 @@
 +++
 
 @snap[north span-100]
-#### 2d 平面画线算法
+#### Bresenham 画线算法
 @snapend
 
 @snap[west span-70]
@@ -51,7 +51,7 @@ def draw_line(
 +++
 
 @snap[west span-50]
-### 3d 顶点坐标转换为2d平面坐标
+### 2, 3d 顶点坐标转换为2d平面坐标
 @snapend
 
 @snap[east span-50]
@@ -61,7 +61,7 @@ def draw_line(
 +++
 
 @snap[north span-100]
-### 3d 顶点坐标转换为2d平面坐标
+### 3, 3d 顶点坐标转换为2d平面坐标
 @snapend
 
 @snap[west span-60]
@@ -78,7 +78,7 @@ projection_matrix * view_matrix *\
 
 +++
 @snap[west span-50]
-### 简单的光照
+### 4, 简单的光照
 @snapend
 
 
@@ -89,7 +89,7 @@ projection_matrix * view_matrix *\
 
 +++
 @snap[west span-50]
-### 纹理映射
+### 5,  纹理映射
 @snapend
 
 @snap[east span-50]
