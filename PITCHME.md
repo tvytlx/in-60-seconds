@@ -118,6 +118,22 @@ def get_light_intensity(face):
 ![](axe.png)
 @snapend
 
+
++++
+@snap[north span-100]
+### 纹理映射
+@snapend
+
+@snap[west span-70]
+利用 z-buffer + Barycentric Coordinates算法（重心坐标插值算法），来定位三角形内像素的纹理坐标
+@snapend
+
+
+@snap[east span-30]
+![](axe.png)
+@snapend
+
+
 ---
 
 ## 经验
