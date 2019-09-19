@@ -67,6 +67,8 @@ def draw_line(
 ![](gl_transform.png)
 @snapend
 
+图片来自：http://www.songho.ca/opengl/gl_transform.html
+
 @snap[east span-40]
 ![](monkey_wireframe.png)
 @snapend
